@@ -14,18 +14,51 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+}
+
+/* --- Light Mode --- */
+.App.light {
+  background-color: white;
+  color: black;
+}
+
+.App.light .App-link {
+  color: #0077cc;
+}
+
+.App.light button {
+  background-color: #61dafb;
+  color: black;
+}
+
+/* --- Dark Mode --- */
+.App.dark {
+  background-color: #282c34;
   color: white;
 }
 
-.App-link {
+.App.dark .App-link {
   color: #61dafb;
+}
+
+.App.dark button {
+  background-color: #444;
+  color: white;
+}
+
+/* ปุ่มทั่วไป */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  margin-top: 10px;
 }
 
 @keyframes App-logo-spin {
