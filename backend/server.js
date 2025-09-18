@@ -11,6 +11,10 @@ app.get("/api/hello", (req, res) => {
   res.json({ message: "Hello World!" });
 });
 
+app.get("/api/time", (req, res) => {
+  const now = new Date();
+  res.json({ currentTime: now.toLocaleString() });
+});
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
